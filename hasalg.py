@@ -58,18 +58,20 @@ def hide_and_seek():
 
     init_turtle()
 
-    stepNumber = 0
+    nSteps = 0
+    nTurns = 0
     while True:
         time.sleep(1)
         turtle.setheading(pick_random_direction())
+        nTurns += 1
         isWarmer = step_in_direction_is_warmer()
         while isWarmer:
-            stepNumber += 1
+            nSteps += 1
             isWarmer = step_in_direction_is_warmer()
-            print(f" Step # {stepNumber} to {turtle.xcor()}, {turtle.ycor()}")
+            print(f" Step # {nSteps} to {turtle.xcor()}, {turtle.ycor()}")
             time.sleep(.02)
             if close_enough_to_target():
-                print(f"\nGOTCHA! in {stepNumber} steps.")
+                print(f"\nGOTCHA! in {nSteps} steps and {nTurns} turns.")
                 return # done!
 
         # # draw the tangent circle
