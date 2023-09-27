@@ -8,3 +8,4 @@ Hence this testbed.
 
 I'm not sure this is going anywhere (haha).
 
+![An screenshot:](/screenshot.png)
